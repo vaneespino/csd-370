@@ -19,35 +19,6 @@
         "cells": [
           {
             "position": {
-              "x": 342,
-              "y": 9.999999999999915
-            },
-            "size": {
-              "width": 640,
-              "height": 450
-            },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "d9d120ae-b9d1-4b13-8dee-61edcb9a735f",
-            "zIndex": -1,
-            "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [
-                "d7260280-ff4b-4703-9b77-186961983c9e",
-                "cf166e2d-543e-4fde-ba4f-554e8bb42879"
-              ],
-              "containedElements": [
-                "94522e61-5617-4845-9173-c95fa48d5a6b",
-                "4c474664-eec0-4573-9de7-21f6388681eb"
-              ]
-            }
-          },
-          {
-            "position": {
               "x": 10,
               "y": 160
             },
@@ -441,9 +412,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "d9d120ae-b9d1-4b13-8dee-61edcb9a735f"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "HTTPS"
@@ -551,9 +520,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "d9d120ae-b9d1-4b13-8dee-61edcb9a735f"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "HTTPS"
