@@ -301,11 +301,13 @@
                 "text": "SQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -402,13 +404,66 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "7f5fe520-ca32-45d4-a54a-8cf462c34a4c",
+                  "title": "SQL injection",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "when untrusted input is concatenated directly into a database query without validation, allowing attackers to alter code logic, extract data, or execute unauthorized commands",
+                  "mitigation": "1. Use Parameterized Queries\n2. Enforce Principle of Least Privilege\n3. Validate User Input\n4. Disable Unused Features",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "1d149352-83b0-4408-aed7-6e47fbd04257",
+                  "title": "Insecure APIs",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Poorly secured third-party integrations and application APIs connected to the SQL server provide unprotected backdoors for data scraping",
+                  "mitigation": "implement strict authentication and authorization frameworks like OAuth 2.0 to ensure only verified users and systems can request data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "eef57945-120c-4d9d-8046-010362ce07be",
+                  "title": "Malware and Ransomware",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Malicious code encrypts database files or host servers directly, forcing severe data operational downtime until a ransom is paid",
+                  "mitigation": "Implement continuous database tracking, use data encryption, and maintain immutable offsite backups",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -710,6 +765,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 4
   }
 }
